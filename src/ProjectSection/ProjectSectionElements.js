@@ -57,6 +57,14 @@ export const Image = styled.img`
     opacity: 0.8;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+    height: 200px;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 170px;
+  } ;
 `;
 
 export const ProjectName = styled.h2`
@@ -68,4 +76,6 @@ export const ProjectName = styled.h2`
 export const ProjectDescription = styled.p`
   margin-top: 15px;
   font-size: 18px;
+
+  
 `;

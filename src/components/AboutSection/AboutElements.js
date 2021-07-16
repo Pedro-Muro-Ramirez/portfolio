@@ -47,6 +47,13 @@ export const Heading = styled.p`
   color: #fff;
   font-size: 25px;
   margin-top: 50px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 18px;
+  }
 `;
 
 export const Column2 = styled.div`
