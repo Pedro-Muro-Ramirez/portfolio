@@ -16,6 +16,7 @@ import {
   ProjectName,
   ProjectDescription,
 } from "./ProjectSectionElements";
+import { ExternalLink } from "react-external-link";
 
 const ProjectSection = () => (
   <ProjectContainer>
@@ -25,7 +26,9 @@ const ProjectSection = () => (
     <ProjectWrapper>
       <ImageContainer>
         <ImageWrapper>
-          <Image src={esports} alt="esports-image" />
+          <ExternalLink href="https://pedro-muro-ramirez.github.io/Video-Game-Site/">
+            <Image src={esports} alt="esports-image" />
+          </ExternalLink>
           <ProjectName>Esports Website</ProjectName>
           <DiHtml5 size="25px" />
           <DiCss3 size="25px" />
@@ -36,7 +39,9 @@ const ProjectSection = () => (
           </ProjectDescription>
         </ImageWrapper>
         <ImageWrapper>
-          <Image src={clock} alt="clock-image" />
+          <ExternalLink href="https://pedro-muro-ramirez.github.io/clock-app/">
+            <Image src={clock} alt="clock-image" />
+          </ExternalLink>
           <ProjectName>Clock App</ProjectName>
           <DiHtml5 size="25px" />
           <DiCss3 size="25px" />
@@ -47,7 +52,9 @@ const ProjectSection = () => (
           </ProjectDescription>
         </ImageWrapper>
         <ImageWrapper>
-          <Image src={agency} alt="agency-image" />
+          <ExternalLink href="https://pedro-muro-ramirez.github.io/sunnyside-agency-site/">
+            <Image src={agency} alt="agency-image" />
+          </ExternalLink>
           <ProjectName>Agency Website</ProjectName>
           <DiHtml5 size="25px" />
           <DiCss3 size="25px" />
@@ -57,7 +64,9 @@ const ProjectSection = () => (
           </ProjectDescription>
         </ImageWrapper>
         <ImageWrapper>
-          <Image src={photosnap} alt="photosnap-image" />
+          <ExternalLink href="https://github.com/">
+            <Image src={photosnap} alt="photosnap-image" />
+          </ExternalLink>
           <ProjectName>Photosnap Website</ProjectName>
           <DiHtml5 size="25px" />
           <DiCss3 size="25px" />

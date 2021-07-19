@@ -1,5 +1,5 @@
 import React from "react";
-import coding from "../../images/coding.svg";
+import coding from "../../images/static.svg";
 import {
   AboutContainer,
   AboutWrapper,
@@ -16,17 +16,25 @@ const AboutSection = () => {
   return (
     <>
       <AboutContainer>
+        <TopLine>About Me</TopLine>
         <AboutWrapper>
           <Column1>
             <TextWrapper>
-              <TopLine>About Me</TopLine>
               <Heading>
-                He had three simple rules by which he lived. The first was to
-                never eat blue food. There was nothing in nature that was edible
-                that was blue. People often asked about blueberries, but
-                everyone knows those are actually purple. He understood it was
-                one of the stranger rules to live by, but it had served him well
-                thus far in the 50+ years of his life.
+                Hello, my name is Pedro Muro-Ramirez! I'm an aspiring Front-End
+                Developer with experience in technical support and a
+                demonstrated history of working in customer service. I received
+                my B.S in Criminal Justice from the University of Nebraska at
+                Omaha. I found my passion for learning about web development
+                during my time working for a WordPress hosting company called
+                Flywheel. My hunger for knowledge and determination to turn
+                information into action made me one of the top technical support
+                specialists for their chat team. I'm currently looking to level
+                up my career by becoming a Front-End Developer. I currently have
+                knowledge in HTML, CSS, Javascript, React, and Bootstrap. If you
+                are looking for a motivated individual who learns quickly, has
+                attention to detail, and can learn Spanish from, then let's get
+                to work.
               </Heading>
             </TextWrapper>
           </Column1>
