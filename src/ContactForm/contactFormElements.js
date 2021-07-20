@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const ContactFormContainer = styled.div`
   color: #fff;
   background: #1d2122;
-  height: 800px;
+  height: 900px;
   display: flex;
   flex-direction: column;
 `;
 
 export const FormWrapper = styled.div`
-  margin: 0 auto;
+  margin: 150px auto 0;
 `;
 
 export const InputContainer = styled.div`
@@ -17,13 +17,21 @@ export const InputContainer = styled.div`
   width: 400px;
   margin: 0 auto;
   text-align: left;
+
+  @media screen and (max-width: 480px) {
+    width: 250px;
+  }
 `;
 
 export const FormTitle = styled.h1`
-  font-size: 40px;
+  font-size: 70px;
   text-align: center;
-  margin: 30px auto 0;
+  margin: 0 auto 40px;
   color: #33dac4;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const FormInputs = styled.div`

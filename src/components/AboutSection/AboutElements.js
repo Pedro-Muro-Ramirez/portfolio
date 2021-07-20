@@ -3,10 +3,7 @@ import styled from "styled-components";
 export const AboutContainer = styled.div`
   color: #fff;
   background: #1d2122;
-
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
+  padding: 100px 0;
 `;
 
 export const AboutWrapper = styled.div`
@@ -45,6 +42,10 @@ export const TopLine = styled.h1`
   font-size: 70px;
   color: #33dac4;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 export const Heading = styled.p`
@@ -87,6 +88,6 @@ export const Image = styled.img`
   }
 
   @media screen and (max-width: 400px) {
-    height: 140px;
+    height: 120px;
   } ;
 `;
