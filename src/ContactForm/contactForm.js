@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -29,8 +28,6 @@ const schema = yup.object().shape({
   email: yup.string().email().required(),
   message: yup.string().required(),
 });
-
-// sendEmail,
 
 const ContactForm = () => {
   const {
