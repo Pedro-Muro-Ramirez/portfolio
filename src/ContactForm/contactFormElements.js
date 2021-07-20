@@ -94,3 +94,13 @@ export const Icons = styled.i`
   color: white;
   cursor: pointer;
 `;
+
+export const FormErrors = styled.p`
+  color: red;
+`;
+
+export const EmailStatus = styled.p`
+  font-size: 20px;
+  margin-top: 20px;
+  color: limegreen;
+`;

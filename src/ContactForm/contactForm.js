@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import {
   ContactFormContainer,
   FormWrapper,
@@ -13,37 +16,64 @@ import {
   ButtonWrapper,
   Linked,
   Icons,
+  FormErrors,
+  EmailStatus,
 } from "./contactFormElements";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { ExternalLink } from "react-external-link";
+import { init, sendForm } from "emailjs-com";
+init("user_gQBckmhqJpB4WlV1tB0SO");
+
+const schema = yup.object().shape({
+  name: yup.string().required(),
+  email: yup.string().email().required(),
+  message: yup.string().required(),
+});
+
+// sendEmail,
 
 const ContactForm = () => {
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
-    emailjs
-      .sendForm(
-        "service_rjjos69",
-        "template_uh02wsa",
-        e.target,
-        "user_gQBckmhqJpB4WlV1tB0SO"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const submitForm = (data) => {
+    const form = document.querySelector("#contact-form");
+    console.log(data);
+    sendForm(
+      "service_rjjos69",
+      "template_uh02wsa",
+      "#contact-form",
+      "user_gQBckmhqJpB4WlV1tB0SO"
+    ).then(
+      (result) => {
+        console.log(result.text);
+        setStatusMessage("Message Sent!");
+        form.reset();
+        setTimeout(() => {
+          setStatusMessage("");
+        }, 5000);
+      },
+      (error) => {
+        console.log(error.text);
+        setStatusMessage(
+          "Failed to send message! Please try emailing muro285@gmail.com"
+        );
+      }
+    );
   };
 
   return (
     <>
       <ContactFormContainer id="contact">
         <FormWrapper>
-          <form onSubmit={sendEmail}>
+          <form id="contact-form" onSubmit={handleSubmit(submitForm)}>
             <FormTitle>Contact Me</FormTitle>
             <InputContainer>
               <FormInputs>
@@ -53,7 +83,9 @@ const ContactForm = () => {
                   type="text"
                   name="name"
                   placeholder="Full Name"
+                  {...register("name", { required: true })}
                 />
+                <FormErrors>{errors.name?.message}</FormErrors>
               </FormInputs>
               <FormInputs>
                 <Inputlabel>Email</Inputlabel>
@@ -62,16 +94,24 @@ const ContactForm = () => {
                   type="email"
                   name="email"
                   placeholder="example@gmail.com"
+                  {...register("email", { required: true })}
                 />
+                <FormErrors>{errors.email?.message}</FormErrors>
               </FormInputs>
               <FormInputs>
                 <Inputlabel>Message</Inputlabel>
-                <InputText name="message" placeholder="Enter message" />
+                <InputText
+                  name="message"
+                  placeholder="Enter message"
+                  {...register("message", { required: true })}
+                />
+                <FormErrors>{errors.message?.message}</FormErrors>
               </FormInputs>
               <ButtonWrapper>
                 <FormButton type="submit" value="Send">
                   Send
                 </FormButton>
+                <EmailStatus>{statusMessage}</EmailStatus>
               </ButtonWrapper>
               <Linked>
                 <ExternalLink href="https://www.linkedin.com/in/pedro-muro-ramirez-228272132/">
