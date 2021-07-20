@@ -41,7 +41,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <ContactFormContainer>
+      <ContactFormContainer id="contact">
         <FormWrapper>
           <form onSubmit={sendEmail}>
             <FormTitle>Contact Me</FormTitle>

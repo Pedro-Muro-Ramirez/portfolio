@@ -19,7 +19,7 @@ import {
 import { ExternalLink } from "react-external-link";
 
 const ProjectSection = () => (
-  <ProjectContainer>
+  <ProjectContainer id="projects">
     <TitleWrapper>
       <ProjectTitle>Projects</ProjectTitle>
     </TitleWrapper>

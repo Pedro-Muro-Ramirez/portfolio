@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactFormContainer = styled.div`
   color: #fff;
   background: #1d2122;
-  height: 500px;
+  height: 800px;
   display: flex;
   flex-direction: column;
 `;

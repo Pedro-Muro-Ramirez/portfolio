@@ -15,7 +15,7 @@ import {
 const AboutSection = () => {
   return (
     <>
-      <AboutContainer>
+      <AboutContainer id="about">
         <TopLine>About Me</TopLine>
         <AboutWrapper>
           <Column1>

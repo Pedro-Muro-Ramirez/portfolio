@@ -29,7 +29,7 @@ export const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(LinkS)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -90,6 +90,6 @@ export const NavLinks = styled(LinkS)`
   }
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #33dac4;
   }
 `;
