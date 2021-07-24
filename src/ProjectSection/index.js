@@ -64,7 +64,7 @@ const ProjectSection = () => (
           </ProjectDescription>
         </ImageWrapper>
         <ImageWrapper>
-          <ExternalLink href="https://github.com/">
+          <ExternalLink href="https://pedro-muro-ramirez.github.io/photosnap-multi-page-website/">
             <Image src={photosnap} alt="photosnap-image" />
           </ExternalLink>
           <ProjectName>Photosnap Website</ProjectName>
