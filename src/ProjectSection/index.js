@@ -1,9 +1,17 @@
 import React from "react";
-import { DiCss3, DiHtml5, DiJsBadge, DiBootstrap } from "react-icons/di";
+import {
+  DiCss3,
+  DiHtml5,
+  DiJsBadge,
+  DiBootstrap,
+  DiReact,
+} from "react-icons/di";
 import esports from "../images/esports1.png";
 import clock from "../images/clock.png";
 import agency from "../images/agency.png";
 import photosnap from "../images/photosnap.png";
+import todolist from "../images/todolist.png";
+import portfolio from "../images/portfolio.png";
 
 import {
   ProjectContainer,
@@ -74,6 +82,28 @@ const ProjectSection = () => (
           <ProjectDescription>
             Multipage website with a mobile first design.
           </ProjectDescription>
+        </ImageWrapper>
+        <ImageWrapper>
+          <ExternalLink href="https://pedro-muro-ramirez.github.io/todolist/">
+            <Image src={todolist} alt="to-do-list-image" />
+          </ExternalLink>
+          <ProjectName>To-Do List</ProjectName>
+          <DiReact size="25px" />
+          <DiCss3 size="25px" />
+          <DiJsBadge size="25px" />
+          <ProjectDescription>
+            A simple todo list with a filter.
+          </ProjectDescription>
+        </ImageWrapper>
+        <ImageWrapper>
+          <ExternalLink href="">
+            <Image src={portfolio} alt="portfolio-image" />
+          </ExternalLink>
+          <ProjectName>My Portfolio</ProjectName>
+          <DiReact size="25px" />
+          <DiCss3 size="25px" />
+          <DiJsBadge size="25px" />
+          <ProjectDescription>You are currently here.</ProjectDescription>
         </ImageWrapper>
       </ImageContainer>
     </ProjectWrapper>
